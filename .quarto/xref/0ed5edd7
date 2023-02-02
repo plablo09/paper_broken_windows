@@ -1,0 +1,1 @@
+{"entries":[{"caption":"Gapminder: 1957","order":{"number":1},"parent":"fig-gapminder","key":"fig-gapminder-1"},{"caption":"Gapminder: 2007","order":{"number":2},"parent":"fig-gapminder","key":"fig-gapminder-2"},{"order":{"section":[0,3,0,0,0,0,0],"number":1},"caption":"Life Expectancy and GDP","key":"fig-gapminder"}],"headings":["numpy","matplotlib","plotly"]}

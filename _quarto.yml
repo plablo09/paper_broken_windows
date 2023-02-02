@@ -1,0 +1,21 @@
+project:
+  type: website
+
+website:
+  title: "Reproducción del Artículo tal..."
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: preproceso.qmd
+        text: Preproceso
+      - about.qmd
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+
+
+
