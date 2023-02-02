@@ -1,0 +1,37 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "paper_broken_windows",
+    "section": "",
+    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+  },
+  {
+    "objectID": "preproceso.html",
+    "href": "preproceso.html",
+    "title": "Preproceso",
+    "section": "",
+    "text": "import numpy as np\na = np.arange(15).reshape(3, 5)\na\n\narray([[ 0,  1,  2,  3,  4],\n       [ 5,  6,  7,  8,  9],\n       [10, 11, 12, 13, 14]])"
+  },
+  {
+    "objectID": "preproceso.html#matplotlib",
+    "href": "preproceso.html#matplotlib",
+    "title": "Preproceso",
+    "section": "Matplotlib",
+    "text": "Matplotlib\n\nimport matplotlib.pyplot as plt\n\nfig = plt.figure()\nx = np.arange(10)\ny = 2.5 * np.sin(x / 20 * np.pi)\nyerr = np.linspace(0.05, 0.2, 10)\n\nplt.errorbar(x, y + 3, yerr=yerr, label='both limits (default)')\nplt.errorbar(x, y + 2, yerr=yerr, uplims=True, label='uplims=True')\nplt.errorbar(x, y + 1, yerr=yerr, uplims=True, lolims=True,\n             label='uplims=True, lolims=True')\n\nupperlimits = [True, False] * 5\nlowerlimits = [False, True] * 5\nplt.errorbar(x, y, yerr=yerr, uplims=upperlimits, lolims=lowerlimits,\n             label='subsets of uplims and lolims')\n\nplt.legend(loc='lower right')\nplt.show(fig)"
+  },
+  {
+    "objectID": "preproceso.html#plotly",
+    "href": "preproceso.html#plotly",
+    "title": "Preproceso",
+    "section": "Plotly",
+    "text": "Plotly\n\nimport plotly.express as px\nimport plotly.io as pio\ngapminder = px.data.gapminder()\ngapminder2007 = gapminder.query(\"year == 2007\")\nfig = px.scatter(gapminder2007, \n                 x=\"gdpPercap\", y=\"lifeExp\", color=\"continent\", \n                 size=\"pop\", size_max=60,\n                 hover_name=\"country\")\nfig.show()\n\n\n                                                \n\n\n\nimport plotly.express as px\nimport plotly.io as pio\ngapminder = px.data.gapminder()\ndef gapminder_plot(year):\n    gapminderYear = gapminder.query(\"year == \" + \n                                    str(year))\n    fig = px.scatter(gapminderYear, \n                     x=\"gdpPercap\", y=\"lifeExp\",\n                     size=\"pop\", size_max=60,\n                     hover_name=\"country\")\n    fig.show()\n    \ngapminder_plot(1957)\ngapminder_plot(2007)\n\n\n\n\n\n\n                                                \n(a) Gapminder: 1957\n\n\n\n\n\n                                                \n(b) Gapminder: 2007\n\n\n\nFigure 1: Life Expectancy and GDP"
+  }
+]
